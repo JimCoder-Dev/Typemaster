@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'Barlow', sans-serif;
+  color: $darkGray;
+
+  text-align: center;
+  @include breakpoint-up(medium) {
+    text-align: left;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+a,
+a:visited,
+a:hover {
+  display: inline-block;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  color: $darkBlue;
+  font-size: 900;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  @include breakpoint-up(medium) {
+    margin-bottom: 0;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.images {
+  position: relative;
+}
+
+.container {
+  padding: 0 1rem;
+
+  margin: 0 auto;
+  max-width: 72rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  @include breakpoint-up(medium) {
+    padding: 0 2.5rem;
+  }
+  @include breakpoint-up(xlarge) {
+    padding: 0 4rem;
+  }
+}
+
+.flex {
+  display: flex;
+}

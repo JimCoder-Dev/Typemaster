@@ -1,0 +1,29 @@
+.btn {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.82rem 0.875rem;
+  border-radius: 0.5rem;
+  @include breakpoint-up(xlarge) {
+    padding: 1.125rem 1.655rem;
+  }
+}
+
+.btn-orange {
+  background-color: $darkOrange;
+  color: $white;
+}
+
+.btn-orange:hover,
+.btn-orange:focus {
+  background-color: $lightOrange;
+}
+
+.btn-gray {
+  background-color: $lightGray;
+}
+
+.btn-gray:hover,
+.btn-gray:focus {
+  background-color: $darkBlue;
+  color: $white;
+}

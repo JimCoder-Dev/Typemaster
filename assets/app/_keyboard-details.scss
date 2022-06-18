@@ -1,0 +1,100 @@
+.keyboard-details {
+  position: relative;
+  .pattern-square {
+    display: none;
+  }
+
+  @include breakpoint-up(xlarge) {
+    .pattern-square {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  .grid {
+    @include breakpoint-up(xlarge) {
+      display: grid;
+      grid-template-columns: 70fr 30fr;
+    }
+  }
+
+  .keyboard-phone,
+  .keyboard-glass {
+    height: 12.0625rem;
+  }
+
+  .keyboard-phone {
+    width: 8.0625rem;
+    transform: translateX(-2rem);
+    z-index: -10;
+    @include breakpoint-up(medium) {
+      width: 13.375rem;
+      height: 20rem;
+      margin-right: 2.5rem;
+      transform: translateX(0);
+    }
+    @include breakpoint-up(xlarge) {
+      content: url('/assets/desktop/image-phone-and-keyboard.jpg');
+      width: 15.9375rem;
+      height: 30rem;
+    }
+  }
+
+  .keyboard-glass {
+    width: 13.75rem;
+    transform: translateX(-1rem);
+
+    @include breakpoint-up(medium) {
+      width: 27.8125rem;
+      height: 20rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+      content: url('/assets/desktop/image-glass-and-keyboard.jpg');
+      height: 30rem;
+    }
+  }
+
+  .orange-filter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(241, 103, 24, 0.8);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 8.0625rem;
+    height: 12.0625rem;
+    transform: translateX(-2rem);
+    @include breakpoint-up(medium) {
+      width: 13.375rem;
+      height: 20rem;
+      border-radius: 0.5rem;
+      transform: translateX(0);
+    }
+    @include breakpoint-up(xlarge) {
+      width: 15.9375rem;
+      height: 30rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .keyboard-details-text {
+    margin-bottom: 6rem;
+    display: grid;
+    @include breakpoint-up(medium) {
+      grid-template-columns: 40fr 60fr;
+      p {
+        margin: auto 0;
+      }
+    }
+
+    @include breakpoint-up(xlarge) {
+      grid-template-columns: 1fr;
+      transform: translateX(6rem);
+    }
+  }
+}

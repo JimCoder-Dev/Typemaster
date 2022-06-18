@@ -1,0 +1,41 @@
+.features {
+  @include breakpoint-up(medium) {
+    margin-right: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    @include breakpoint-up(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint-up(xlarge) {
+      margin-top: 4rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+  }
+  /* ICON BOX */
+  .orange-box {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.0625rem;
+    width: 4.0625rem;
+    border-radius: 0.8rem;
+    background-color: $darkOrange;
+    @include breakpoint-up(medium) {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    margin-bottom: 4rem;
+    @include breakpoint-up(medium) {
+      padding-right: 4rem;
+    }
+    @include breakpoint-up(xlarge) {
+      padding-right: 2rem;
+    }
+  }
+}

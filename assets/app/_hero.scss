@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  margin-bottom: 2rem;
+
+  text-align: left;
+  &__text {
+    margin-right: 1rem;
+
+    @include breakpoint-up(xlarge) {
+      padding-right: 4rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    .flex {
+      align-items: center;
+      margin-bottom: 2rem;
+      p {
+        margin: 0;
+        margin-left: 1rem;
+        font-size: 0.7rem;
+        @include breakpoint-up(medium) {
+          margin-left: 2rem;
+        }
+        @include breakpoint-up(xlarge) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &__image {
+    transform: translateX(2rem);
+    @include breakpoint-up(medium) {
+      width: 29.875rem;
+      height: 26.5625rem;
+    }
+  }
+
+  .grid {
+    display: grid;
+    @include breakpoint-up(medium) {
+      grid-template-columns: 60fr 40fr;
+    }
+    @include breakpoint-up(xlarge) {
+      grid-template-columns: 50fr 50fr;
+    }
+  }
+
+  .hero-square {
+    display: none;
+    position: absolute;
+    @include breakpoint-up(xlarge) {
+      display: block;
+      right: 0;
+      top: 0;
+      transform: translateX(50%);
+    }
+  }
+}
